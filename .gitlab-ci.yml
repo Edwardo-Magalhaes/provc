@@ -1,0 +1,15 @@
+stages:
+  - test
+  - build
+
+test-job:
+  stage: test
+  script:
+    - echo "Executando testes"
+    - python -m unittest discover
+
+build-job:
+  stage: build
+  script:
+    - echo "Construindo aplicação"
+    - python main.py
